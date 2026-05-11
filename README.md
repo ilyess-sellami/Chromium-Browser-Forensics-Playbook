@@ -70,14 +70,14 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 - What was the browsing timeline?
 - Was suspicious infrastructure contacted?
 
-### Visited URLs Querie
+### Visited URLs Query
 
 ```bash
 SELECT url, title, visit_count
 FROM urls;
 ```
 
-### Download History Querie
+### Download History Query
 
 ```bash
 SELECT target_path, tab_url
