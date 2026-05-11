@@ -34,7 +34,7 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 
 ---
 
-### 02 - Common Chromium Profile Files
+## 02 - Common Chromium Profile Files
 
 | File            | Purpose                      | Default Path                       |
 | --------------- | ---------------------------- | ---------------------------------- |
