@@ -53,6 +53,8 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 
 ### 03 - Browsing ``History`` Analysis
 
+The ``History`` database helps investigators reconstruct user browsing activity, visited websites, searches, and downloaded files. It is useful for identifying phishing activity, malicious domains, attacker infrastructure, and user actions during an incident.
+
 ### Important Tables
 
 | Table                | Description           |
@@ -62,19 +64,18 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 | downloads            | Downloaded files      |
 | keyword_search_terms | Search engine queries |
 
-### Key Investigation Questions
-
-- What websites were visited?
-- What search queries were performed?
-- Which domains were accessed frequently?
-- What was the browsing timeline?
-- Was suspicious infrastructure contacted?
-
 ### Visited URLs Query
 
 ```bash
 SELECT url, title, visit_count
 FROM urls;
+```
+
+### Search Queries
+
+```bash
+SELECT term
+FROM keyword_search_terms;
 ```
 
 ### Download History Query
@@ -83,3 +84,11 @@ FROM urls;
 SELECT target_path, tab_url
 FROM downloads;
 ```
+
+---
+
+## 04 - Cookies & Sessions
+
+
+
+
