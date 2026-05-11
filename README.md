@@ -51,7 +51,7 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 
 ---
 
-## 03 - Browsing ``History`` Analysis
+## 03 - History Analysis
 
 The ``History`` database helps investigators reconstruct user browsing activity, visited websites, searches, and downloaded files. It is useful for identifying phishing activity, malicious domains, attacker infrastructure, and user actions during an incident.
 
@@ -87,8 +87,25 @@ FROM downloads;
 
 ---
 
-## 04 - Cookies & Sessions
+## 04 - Cookies Analysis
 
+The ``Cookies`` database stores authentication sessions, tracking data, and login states. It is useful for identifying active sessions, account compromise, session hijacking, and tracking user access to web services.
 
+```bash
+SELECT host_key, name, value, is_persistent, last_access_utc, expires_utc
+FROM cookies;
+```
 
+---
+
+## 05 - Login Data Analysis
+
+The ``Login Data`` database stores saved usernames and encrypted passwords. It is useful for detecting credential theft, reused accounts, and compromised services.
+
+```bash
+SELECT origin_url, username_value, password_value
+FROM logins;
+```
+
+---
 
