@@ -8,7 +8,7 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 
 ## 01 - Evidence Collection
 
-### Windows
+#### Windows
 
 ```bash
 %LOCALAPPDATA%\Google\Chrome\User Data\
@@ -16,7 +16,7 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 %LOCALAPPDATA%\BraveSoftware\Brave-Browser\User Data\
 ```
 
-### Linux
+#### Linux
 
 ```bash
 ~/.config/google-chrome/
@@ -24,7 +24,7 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 ~/.config/BraveSoftware/Brave-Browser/
 ```
 
-### macOS
+#### MacOS
 
 ```bash
 ~/Library/Application Support/Google/Chrome/
@@ -55,7 +55,7 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 
 The ``History`` database helps investigators reconstruct user browsing activity, visited websites, searches, and downloaded files. It is useful for identifying phishing activity, malicious domains, attacker infrastructure, and user actions during an incident.
 
-### Important Tables
+#### Important Tables
 
 | Table                | Description           |
 | -------------------- | --------------------- |
@@ -64,21 +64,21 @@ The ``History`` database helps investigators reconstruct user browsing activity,
 | downloads            | Downloaded files      |
 | keyword_search_terms | Search engine queries |
 
-### Visited URLs Query
+#### Visited URLs Query
 
 ```bash
 SELECT url, title, visit_count
 FROM urls;
 ```
 
-### Search Queries
+#### Search Query
 
 ```bash
 SELECT term
 FROM keyword_search_terms;
 ```
 
-### Download History Query
+#### Download History Query
 
 ```bash
 SELECT target_path, tab_url
