@@ -1,4 +1,4 @@
-<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/85b21bd0-4ca6-4fd9-9d96-b2175b42791e" /># Chromium Browser Forensics Playbook
+# Chromium Browser Forensics Playbook
 
 Chromium-based browsers such as **Google Chrome**, **Microsoft Edge**, **Brave**, and **Opera** store valuable forensic artifacts including browsing history, downloads, cookies, credentials, sessions, extensions, and cache data.
 
