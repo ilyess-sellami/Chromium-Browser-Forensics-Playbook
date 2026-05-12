@@ -179,7 +179,7 @@ FROM top_sites;
 
 ---
 
-## 10 - Current Session Analysis
+## 10 - ``Current Session`` Analysis
 
 The ``Current Session`` files store active tabs and current browser sessions. It is useful for recovering active user activity, phishing tabs, and attacker sessions.
 
