@@ -6,7 +6,7 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 
 ---
 
-## 01 - Evidence Collection
+## 00 - Evidence Collection
 
 #### Windows
 
@@ -32,9 +32,7 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 ~/Library/Application Support/BraveSoftware/Brave-Browser/
 ```
 
----
-
-## 02 - Common Chromium Profile Files
+#### Common Chromium Profile Files
 
 | File            | Purpose                      | Default Path                       |
 | --------------- | ---------------------------- | ---------------------------------- |
@@ -51,7 +49,7 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 
 ---
 
-## 03 - ``History`` Analysis
+## 01 - ``History`` Analysis
 
 The ``History`` database helps investigators reconstruct user browsing activity, visited websites, searches, and downloaded files. It is useful for identifying phishing activity, malicious domains, attacker infrastructure, and user actions during an incident.
 
@@ -87,7 +85,7 @@ FROM downloads;
 
 ---
 
-## 04 - ``Cookies`` Analysis
+## 02 - ``Cookies`` Analysis
 
 The ``Cookies`` database stores authentication sessions, tracking data, and login states. It is useful for identifying active sessions, account compromise, session hijacking, and tracking user access to web services.
 
@@ -98,7 +96,7 @@ FROM cookies;
 
 ---
 
-## 05 - ``Login Data`` Analysis
+## 03 - ``Login Data`` Analysis
 
 The ``Login Data`` database stores saved usernames and encrypted passwords. It is useful for detecting credential theft, reused accounts, and compromised services.
 
@@ -106,6 +104,3 @@ The ``Login Data`` database stores saved usernames and encrypted passwords. It i
 SELECT origin_url, username_value, password_value
 FROM logins;
 ```
-
----
-
