@@ -11,9 +11,9 @@ This playbook provides a practical DFIR approach for collecting and analyzing Ch
 #### Windows
 
 ```bash
-%LOCALAPPDATA%\Google\Chrome\User Data\Default\
-%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\
-%LOCALAPPDATA%\BraveSoftware\Brave-Browser\User Data\Default\
+%LOCALAPPDATA%\Google\Chrome\User Data\
+%LOCALAPPDATA%\Microsoft\Edge\User Data\
+%LOCALAPPDATA%\BraveSoftware\Brave-Browser\User Data\
 ```
 
 #### Linux
