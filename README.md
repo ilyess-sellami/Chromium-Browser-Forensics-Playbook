@@ -142,3 +142,48 @@ FROM bookmarks;
 
 ## 07 - ``Preferences`` Analysis
 
+The ``Preferences`` file stores browser configuration settings and user preferences. It is useful for detecting browser tampering, disabled protections, and malicious configuration changes.
+
+
+```sql
+SELECT *
+FROM preferences;
+```
+
+---
+
+## 08 - ``Extensions`` Analysis
+
+The ``Extensions`` directory stores installed browser extensions and their configuration files. It is useful for detecting malicious add-ons, browser hijacking, persistence mechanisms, credential theft activity, and unauthorized browser modifications.
+
+| File            | Description                       |
+| --------------- | --------------------------------- |
+| manifest.json   | Main extension configuration file |
+| background.js   | Background execution scripts      |
+| content_scripts | Scripts injected into web pages   |
+| popup.html      | Extension popup interface         |
+| permissions     | Requested browser permissions     |
+| storage data    | Stored extension data             |
+| update_url      | External extension update source  |
+
+---
+
+## 09 - ``Top Sites`` Analysis
+
+The ``Top Sites`` database stores frequently visited websites. It is useful for quickly identifying browsing habits and commonly accessed domains.
+
+```sql
+SELECT url, title
+FROM top_sites;
+```
+
+---
+
+## 10 - Current Session Analysis
+
+The ``Current Session`` files store active tabs and current browser sessions. It is useful for recovering active user activity, phishing tabs, and attacker sessions.
+
+```sql
+SELECT visit_time, url
+FROM visits;
+```
