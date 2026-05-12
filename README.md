@@ -141,12 +141,10 @@ cat Bookmarks
 
 ## 07 - ``Preferences`` Analysis
 
-The ``Preferences`` file stores browser configuration settings and user preferences. It is useful for detecting browser tampering, disabled protections, and malicious configuration changes.
+The ``Preferences`` file stores browser configuration settings and user preferences. It is a JSON file that can help identify browser tampering, disabled security settings, malicious configuration changes, and extension activity.
 
-
-```sql
-SELECT *
-FROM preferences;
+```bash
+cat Preferences
 ```
 
 ---
