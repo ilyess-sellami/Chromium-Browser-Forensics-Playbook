@@ -104,3 +104,41 @@ The ``Login Data`` database stores saved usernames and encrypted passwords. It i
 SELECT origin_url, username_value, password_value
 FROM logins;
 ```
+
+---
+
+## 04 - ``Web Data`` Analysis
+
+The ``Web Data`` database stores autofill information such as emails, phone numbers, addresses, and payment details. It is useful for identifying exposed personal data and identity theft risks.
+
+```sql
+SELECT name, value
+FROM autofill;
+```
+
+---
+
+## 05 - ``Favicons`` Analysis
+
+The ``Favicons`` database stores website icons associated with visited pages. It is useful for correlating browsing activity and recovering traces of visited websites.
+
+```sql
+SELECT icon_url
+FROM favicons;
+```
+
+---
+
+## 06 - ``Bookmarks`` Analysis
+
+The ``Bookmarks`` file stores saved favorite websites and bookmarked pages. It is useful for identifying important services, frequently used platforms, and suspicious saved links.
+
+```sql
+SELECT url
+FROM bookmarks;
+```
+
+---
+
+## 07 - ``Preferences`` Analysis
+
