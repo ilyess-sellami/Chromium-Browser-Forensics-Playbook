@@ -131,11 +131,10 @@ FROM favicons;
 
 ## 06 - ``Bookmarks`` Analysis
 
-The ``Bookmarks`` file stores saved favorite websites and bookmarked pages. It is useful for identifying important services, frequently used platforms, and suspicious saved links.
+The ``Bookmarks`` file stores saved favorite websites and bookmarked pages. It is a JSON file that can help identify important services, suspicious saved links, attacker infrastructure, and user interests.
 
-```sql
-SELECT url
-FROM bookmarks;
+```bash
+cat Bookmarks
 ```
 
 ---
