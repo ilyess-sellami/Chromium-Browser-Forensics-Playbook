@@ -64,21 +64,21 @@ The ``History`` database helps investigators reconstruct user browsing activity,
 
 #### Visited URLs Query
 
-```bash
+```sql
 SELECT url, title, visit_count
 FROM urls;
 ```
 
 #### Search Query
 
-```bash
+```sql
 SELECT term
 FROM keyword_search_terms;
 ```
 
 #### Download History Query
 
-```bash
+```sql
 SELECT target_path, tab_url
 FROM downloads;
 ```
@@ -89,7 +89,7 @@ FROM downloads;
 
 The ``Cookies`` database stores authentication sessions, tracking data, and login states. It is useful for identifying active sessions, account compromise, session hijacking, and tracking user access to web services.
 
-```bash
+```sql
 SELECT host_key, name, value, is_persistent, last_access_utc, expires_utc
 FROM cookies;
 ```
@@ -100,7 +100,7 @@ FROM cookies;
 
 The ``Login Data`` database stores saved usernames and encrypted passwords. It is useful for detecting credential theft, reused accounts, and compromised services.
 
-```bash
+```sql
 SELECT origin_url, username_value, password_value
 FROM logins;
 ```
